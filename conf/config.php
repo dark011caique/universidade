@@ -61,9 +61,9 @@ if($conexao){
     }
 
     $consultaTurma = "CREATE TABLE turma (
-        COD_DISC INT,
-        COD_TURMA INT,
-        COD_PROF INT,
+        COD_DISC VARCHAR(6),
+        COD_TURMA VARCHAR(6),
+        COD_PROF VARCHAR(6)
         ANO VARCHAR(50),
         horario VARCHAR(50),
         PRIMARY KEY (COD_DISC, COD_TURMA, COD_PROF, ANO),
@@ -87,7 +87,7 @@ if($conexao){
         COD_DISC VARCHAR(5),
         COD_TURMA VARCHAR(5),
         COD_PROF VARCHAR(5),
-        ANO VARCHAR(50R,
+        ANO VARCHAR(50R
         frequencia FLOAT,
         nota FLOAT,
         PRIMARY KEY (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO),
