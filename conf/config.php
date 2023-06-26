@@ -87,7 +87,7 @@ if($conexao){
         COD_DISC VARCHAR(5),
         COD_TURMA VARCHAR(5),
         COD_PROF VARCHAR(5),
-        ANO VARCHAR(50R
+        ANO VARCHAR(50),
         frequencia FLOAT,
         nota FLOAT,
         PRIMARY KEY (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO),
