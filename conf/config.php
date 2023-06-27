@@ -20,12 +20,12 @@ if($conexao){
      // Executa a consulta para criar a tabela
     $resultadoAlunos = mysqli_query($conexao, $consultaAlunos);
      // Verifica se a tabela "usuarios" foi criada com sucesso
-    if ($resultadoAlunos){
+    /*if ($resultadoAlunos){
         echo "Tabela alunos criada com sucesso <br>";
     }
     else{
         echo "Erro ao conectar ao banco de dados: " .  mysqli_connect_errno();
-    }
+    }*/
 
     $consultaDisciplinas = "CREATE TABLE disciplinas (
         COD_DISC VARCHAR(5) PRIMARY KEY,
@@ -116,11 +116,10 @@ if($conexao){
 
     
 
-if ($resultadoInsert) {
-        echo "Dados inseridos na tabela Historico com sucesso<br>";
+    /*    echo "Dados inseridos na tabela Historico com sucesso<br>";
     } else {
         echo "Erro ao inserir dados na tabela Historico: " . mysqli_error($conexao) . "<br>";
-    }
+    }*/
     //==================================================================================================================================================
     // Inserir dados na tabela Alunos
     $insertAluno1 = "INSERT INTO alunos (MAT, nome, endereco, cidade) VALUES (2015010101, 'JOSE DE ALENCAR', 'RUA DAS ALMAS', 'NATAL')";
@@ -161,11 +160,11 @@ if ($resultadoInsert) {
     $insertDis4 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('ENG', 'ENGENHARIA DE SOFTWARE', 80)";
     $resultadoDis4 = mysqli_query($conexao, $insertDis4);
 
-    if ($insertDis1 && $insertDis2 && $insertDis3 && $insertDis4) {
+    /*if ($insertDis1 && $insertDis2 && $insertDis3 && $insertDis4) {
         echo "Dados inseridos na tabela Alunos com sucesso<br>";
     } else {
         echo "Erro ao inserir dados na tabela Alunos: " . mysqli_error($conexao) . "<br>";
-    }
+    }*/
     //========================================================================================================================================================
     // Inserir dados na tabela Professores
 
@@ -212,7 +211,7 @@ if ($resultadoInsert) {
 
     mysqli_close($conexao);
 } else {
-    echo "Erro ao conectar-se ao banco de dados: " . mysqli_connect_error() ."<br>";
+    //echo "Erro ao conectar-se ao banco de dados: " . mysqli_connect_error() ."<br>";
 }
 
 
