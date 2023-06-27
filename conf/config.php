@@ -2,11 +2,11 @@
 
 $conexao = mysqli_connect('localhost','root','','universidade');
 
-if($conexao){
+/*if($conexao){
     echo "conexão bem-sucedida";
 }else{
     echo "erro ao conectar ao banco de dados: " . mysqli_connect_errno();
-}
+}*/
 
 if($conexao){
      // Consulta para criar a tabela
@@ -35,12 +35,12 @@ if($conexao){
 
     $resultadoDisciplina = mysqli_query($conexao, $consultaDisciplinas);
 
-    if($resultadoAlunos){
+    /*if($resultadoAlunos){
         echo"Tabela Disciplina criada <br> ";
     }
     else{
         echo "Erro ao conctar ao banco de dados: " . mysqli_connect_errno();
-    }
+    }*/
 
 
     $consultaProfessores = "CREATE TABLE professores(
@@ -53,12 +53,12 @@ if($conexao){
     $resultadoProfessores = mysqli_query($conexao, $consultaProfessores);
 
 
-    if($resultadoProfessores){
+    /*if($resultadoProfessores){
         echo "Tabela professor criada <br>";
     }
     else{
         echo "Erro ao conctar ao banco de dados: " . mysqli_connect_errno();
-    }
+    }*/
 
     $consultaTurma = "CREATE TABLE turma (
         COD_DISC VARCHAR(6),
@@ -74,12 +74,12 @@ if($conexao){
 
      $resultadoTurma = mysqli_query($conexao, $consultaTurma);
 
-    if($resultadoTurma){
+    /*if($resultadoTurma){
         echo "Tabela Turma criada ".'<br>';
     }
     else{
         echo "Erro ao conctar ao banco de dados: " . mysqli_connect_errno();
-    }
+    }*/
     
 
     $consultaHistorico = "CREATE TABLE historico (
@@ -98,12 +98,12 @@ if($conexao){
 
     $resultadoHistorico = mysqli_query($conexao, $consultaHistorico);
 
-    if($resultadoHistorico){
+    /*if($resultadoHistorico){
         echo"Tabela Historico criada <br>";
     }
     else{
         echo "Erro ao conctar ao banco de dados: " . mysqli_connect_errno();
-    }
+    }*/
     //INSERT COMEÇA AQUI 
     //=========================================================================================
     // Código para inserir os dados no histórico
@@ -142,11 +142,11 @@ if ($resultadoInsert) {
     $resultadoInsert6 = mysqli_query($conexao, $insertAluno6);
 
     // Verificar se os dados foram inseridos com sucesso
-    if ($resultadoInsert1 && $resultadoInsert2 && $resultadoInsert3 && $resultadoInsert4 && $resultadoInsert5 && $insertAluno6) {
+    /*if ($resultadoInsert1 && $resultadoInsert2 && $resultadoInsert3 && $resultadoInsert4 && $resultadoInsert5 && $insertAluno6) {
         echo "Dados inseridos na tabela Alunos com sucesso<br>";
     } else {
         echo "Erro ao inserir dados na tabela Alunos: " . mysqli_error($conexao) . "<br>";
-    }
+    }*/
     //=====================================================================================================================================================
     // Inserir dados na tabela Disciplinas
     $insertDis1 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('BD', 'BANCO DE DADOS', 100)";
@@ -178,11 +178,11 @@ if ($resultadoInsert) {
     $insertProf3 = "INSERT INTO professores (COD_PROF, nome, endereco, cidade) VALUES (192011, 'DIEGO OLIVEIRA', 'AVENIDA ROBERTO FREIRE', 'NATAL')";
     $resultOProf3 = mysqli_query($conexao, $insertProf3);
 
-    if ($insertProf1 && $insertProf2 && $insertProf3) {
+    /*if ($insertProf1 && $insertProf2 && $insertProf3) {
         echo "Dados inseridos na tabela Alunos com sucesso<br>";
     } else {
         echo "Erro ao inserir dados na tabela Alunos: " . mysqli_error($conexao) . "<br>";
-    }
+    }*/
     //=============================================================================================================================================================
 
     // Inserir dados na tabela Turma 
@@ -202,12 +202,12 @@ if ($resultadoInsert) {
     $insertTurma5 = "INSERT INTO Turma (COD_DISC, COD_TURMA, COD_PROF, ANO, horario) VALUES ('ENG', 1, 122135, 2015, '10H-11H')";
     $consulta5 = mysqli_query($conexao,$insertTurma5);
 
-    if($insertTurma1 && $insertTurma2 && $insertTurma3 && $insertTurma4 && $insertTurma5){
+    /*if($insertTurma1 && $insertTurma2 && $insertTurma3 && $insertTurma4 && $insertTurma5){
         echo"Dados inseridos na tabela Alunos com sucesso<br>";
     }
     else{
         echo"erro ao tenata conctar ao banco de dados: ". mysqli_connect_errno($conexao);
-    }
+    }*/
 
 
     mysqli_close($conexao);
