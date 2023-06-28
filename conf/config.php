@@ -63,7 +63,7 @@ if($conexao){
     $consultaTurma = "CREATE TABLE turma (
         COD_DISC VARCHAR(6),
         COD_TURMA VARCHAR(6),
-        COD_PROF VARCHAR(6)
+        COD_PROF VARCHAR(6),
         ANO VARCHAR(50),
         horario VARCHAR(50),
         PRIMARY KEY (COD_DISC, COD_TURMA, COD_PROF, ANO),
@@ -93,6 +93,7 @@ if($conexao){
         PRIMARY KEY (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO),
         FOREIGN KEY (MAT) REFERENCES alunos (MAT),
         FOREIGN KEY (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO) REFERENCES turma(MAT, COD_DISC, COD_TURMA, COD_PROF, ANO)
+
     )";
 
 
@@ -107,7 +108,7 @@ if($conexao){
     //INSERT COMEÇA AQUI 
     //=========================================================================================
     // Código para inserir os dados no histórico
-    $insertHistorico = "INSERT INTO Historico (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO, frequencia, nota)
+    $insertHistorico = "INSERT INTO historico (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO, frequencia, nota)
                         SELECT A.MAT, D.COD_DISC, T.COD_TURMA, T.COD_PROF, T.ANO, ROUND(RAND() * 100, 2) AS frequencia, ROUND(RAND() * 10, 2) AS nota
                         FROM Alunos A, Disciplinas D, Turma T
                         WHERE T.COD_DISC = D.COD_DISC";
@@ -148,16 +149,16 @@ if($conexao){
     }*/
     //=====================================================================================================================================================
     // Inserir dados na tabela Disciplinas
-    $insertDis1 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('BD', 'BANCO DE DADOS', 100)";
+    $insertDis1 = "INSERT INTO disciplinas (COD_DISC, nome_disc, carga_hor) VALUES ('BD', 'BANCO DE DADOS', 100)";
     $resultadoDis1 = mysqli_query($conexao, $insertDis1);
 
-    $insertDis2 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('POO', 'PROGRAMAÇÃO COM ACESSO A BANCO DE DADOS', 100)";
+    $insertDis2 = "INSERT INTO disciplinas (COD_DISC, nome_disc, carga_hor) VALUES ('POO', 'PROGRAMAÇÃO COM ACESSO A BANCO DE DADOS', 100)";
     $resultadoDis2 = mysqli_query($conexao, $insertDis2);
 
-    $insertDis3 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('WEB', 'AUTORIA WEB', 50)";
+    $insertDis3 = "INSERT INTO disciplinas (COD_DISC, nome_disc, carga_hor) VALUES ('WEB', 'AUTORIA WEB', 50)";
     $resultadoDis3 = mysqli_query($conexao, $insertDis3);
 
-    $insertDis4 = "INSERT INTO disciplina (COD_DISC, nome_disc, carga_hor) VALUES ('ENG', 'ENGENHARIA DE SOFTWARE', 80)";
+    $insertDis4 = "INSERT INTO disciplinas (COD_DISC, nome_disc, carga_hor) VALUES ('ENG', 'ENGENHARIA DE SOFTWARE', 80)";
     $resultadoDis4 = mysqli_query($conexao, $insertDis4);
 
     /*if ($insertDis1 && $insertDis2 && $insertDis3 && $insertDis4) {
