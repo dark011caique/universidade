@@ -48,7 +48,7 @@ if($conexao){
         nome VARCHAR(50),
         endereco VARCHAR(50),
         cidade VARCHAR(50)
-    )";
+    )ENGINE=InnoDB";
 
     $resultadoProfessores = mysqli_query($conexao, $consultaProfessores);
 
@@ -69,7 +69,7 @@ if($conexao){
         PRIMARY KEY (COD_DISC, COD_TURMA, COD_PROF, ANO),
         FOREIGN KEY (COD_DISC) REFERENCES disciplinas (COD_DISC),
         FOREIGN KEY (COD_PROF) REFERENCES professores (COD_PROF)
-    )";
+    )ENGINE=InnoDB";
 
 
      $resultadoTurma = mysqli_query($conexao, $consultaTurma);
@@ -109,7 +109,7 @@ if($conexao){
     // Código para inserir os dados no histórico
     $insertHistorico = "INSERT INTO Historico (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO, frequencia, nota)
                         SELECT A.MAT, D.COD_DISC, T.COD_TURMA, T.COD_PROF, T.ANO, ROUND(RAND() * 100, 2) AS frequencia, ROUND(RAND() * 10, 2) AS nota
-                        FROM Alunos A, Disciplinas D, Turma T
+                        FROM alunos A, Disciplinas D, Turma T
                         WHERE T.COD_DISC = D.COD_DISC";
 
     $resultadoInsert = mysqli_query($conexao, $insertHistorico);
