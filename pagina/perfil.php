@@ -54,6 +54,9 @@ mysqli_close($conexao);
     </style>
 </head>
 <body>
+
+    <a href="cor.php">escolha sua cor de fundo</a><br><br>
+    <a href="professores.php">meus professores</a>
     <h1>Perfil do Usuário</h1>
     <p>Nome: <?php echo $_SESSION['nome']; ?></p>
     <p>Matrícula: <?php echo $_SESSION['MAT']; ?></p>

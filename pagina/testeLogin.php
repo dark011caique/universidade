@@ -37,7 +37,7 @@
             $_SESSION['MAT'] = $MAT;
             $_SESSION['nome'] = $nome;
 
-            header('location: sistema.php');
+            header('location: perfil.php');
         }
 
     }else{
