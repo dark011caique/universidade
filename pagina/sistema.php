@@ -11,6 +11,8 @@
     }
         $logado = $_SESSION['nome'];
 
+        
+
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +23,16 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1>Alterar Cor de Fundo</h1>
+    <form action="salvar_cor.php" method="POST">
+        <label for="cor">Cor de Fundo:</label>
+        <input type="color" id="cor" name="cor" required>
+        <br><br>
+        <input type="submit" value="Salvar">
     <?php
     
-    echo"<h1>Bem vindo</h1>".$logado;
+    
 
     ?>
 </body>
