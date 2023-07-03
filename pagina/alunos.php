@@ -1,6 +1,11 @@
 <?php
+
+session_start();
+
 // Inclua o arquivo de configuração com as informações de conexão
 include 'C:\wamp64\www\banco\conf\config.php';
+
+include'nav.php';
 
 // Estabeleça a conexão com o banco de dados
 $conexao = mysqli_connect('localhost', 'root', '', 'universidade');
@@ -10,7 +15,7 @@ if (!$conexao) {
     die("Erro ao conectar-se ao banco de dados: " . mysqli_connect_error());
 }
 
-echo "================================================================================================<br>";
+echo"<br>";
 echo"<strong>ALUNOS</strong><br><br>";
 
 // Consulta SQL para selecionar todos os alunos
@@ -32,7 +37,7 @@ if (mysqli_num_rows($resultado) > 0) {
     echo "Nenhum aluno encontrado.";
 }
 
-echo "================================================================================================<br>";
+/*echo "================================================================================================<br>";
 echo"<strong>PROFESSORES</strong><br><br>";
 
 $consulta1 = "SELECT * FROM professores";
@@ -68,7 +73,7 @@ if(mysqli_num_rows($res3) > 0){
 else{
     echo"Nemnhuma discplina encontrada ";
 }
-
+*/
 
 // Feche a conexão com o banco de dados
 mysqli_close($conexao);

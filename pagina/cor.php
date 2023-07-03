@@ -1,6 +1,9 @@
 <?php 
     session_start();
     include 'C:\wamp64\www\banco\conf\config.php';
+
+    include'nav.php';
+    
     //print_r($_SESSION);
     if((!isset($_SESSION['MAT']) == true) and (!isset($_SESSION['nome']) == true)){
 

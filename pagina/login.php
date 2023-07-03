@@ -9,7 +9,7 @@ if ($conexao) {
     // Verificar se o usuário fez login
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $MAT = $_POST['MAT'];
-        $nome = $_POST['password'];
+        $nome = $_POST['nome'];
 
         // Verificar as credenciais no banco de dados
         $query = "SELECT * FROM alunos WHERE MAT = 'MAT' AND nome = '$nome'";
@@ -18,7 +18,7 @@ if ($conexao) {
         if ($result && mysqli_num_rows($result) > 0) {
             // Credenciais corretas, iniciar a sessão para o usuário
             $_SESSION['MAT'] = $MAT;
-            header('Location: sistema.php');
+            header('Location: perfil.php');
             exit;
         } else {
             echo "Credenciais inválidas!";

@@ -30,7 +30,7 @@
 
             echo"erro ao achar usuario1";
 
-            //header('location: login.php');
+            header('location: login.php');
         }
         else
         {

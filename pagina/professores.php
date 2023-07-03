@@ -4,6 +4,8 @@ session_start();
 
 include 'C:\wamp64\www\banco\conf\config.php';
 
+include'nav.php';
+
 // Estabeleça a conexão com o banco de dados
 $conexao = mysqli_connect('localhost', 'root', '', 'universidade');
 
@@ -12,7 +14,6 @@ if (!$conexao) {
     die("Erro ao conectar-se ao banco de dados: " . mysqli_connect_error());
 }
 
-echo "<a href='perfil.php'>perfil</a><br><br>";
 
 echo"<strong>PROFESSORES</strong><br><br>";
 
