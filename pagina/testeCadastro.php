@@ -14,12 +14,12 @@ if (isset($_POST['submit'])) {
 
     $resul = mysqli_query($conexao, "INSERT INTO `alunos`(`nome`, `endereco`, `cidade`, `cor_fundo`) VALUES ('$nome','$endereco','$cidade','')");
 
-    /*if ($resul) {
+    if ($resul) {
         echo "Cadastrado com sucesso";
     } else {
         echo "Erro ao cadastrar: " . mysqli_error($conexao);
     }
-    */
+    
     header('location: login.php');
 }
 

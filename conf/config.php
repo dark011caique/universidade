@@ -11,10 +11,12 @@ $conexao = mysqli_connect('localhost','root','','universidade');
 if($conexao){
      // Consulta para criar a tabela
     $consultaAlunos = "CREATE TABLE alunos (
-        MAT INT PRIMARY KEY,
+        MAT INT PRIMARY KEY AUTO_INCREMENT,
         nome VARCHAR(100),
         endereco VARCHAR(100),
-        cidade VARCHAR(50)
+        cidade VARCHAR(50),
+        cor_fundo VARCHAR(10)
+        foto VARCHAR(100)
     ) ENGINE=InnoDB";
 
      // Executa a consulta para criar a tabela
@@ -94,7 +96,7 @@ if($conexao){
         FOREIGN KEY (MAT) REFERENCES alunos (MAT),
         FOREIGN KEY (MAT, COD_DISC, COD_TURMA, COD_PROF, ANO) REFERENCES turma(MAT, COD_DISC, COD_TURMA, COD_PROF, ANO)
 
-    )";
+    )ENGINE=InnoDB";
 
 
     $resultadoHistorico = mysqli_query($conexao, $consultaHistorico);
