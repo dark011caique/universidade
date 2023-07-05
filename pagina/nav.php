@@ -53,14 +53,17 @@ mysqli_close($conexao);
         }
         img{  
             display: flex;
-            width: 50px;
-            height: 40px;
+            position:absolute;
+            right: 0;
+            width: 60px;
+            height: 60px;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
             margin-bottom: 20px;
             cursor: pointer; 
         }
         #avatar{
+            float: right;
             align-items: center;
             margin-top: 1rem;
             border-radius: 50%;
@@ -77,7 +80,7 @@ mysqli_close($conexao);
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-        <div class="d-flex"> 
+        <div class="d-flex" > 
             <a href="cor.php" class="btn btn-danger me-5">escolha sua cor de fundo</a>
             <a href="professores.php" class="btn btn-danger me-5">Meus professores</a>
             <a href="disciplinas.php" class="btn btn-danger me-5">Disciplina</a>
@@ -86,7 +89,7 @@ mysqli_close($conexao);
             <a href="" class="btn btn-danger me-5">Turma</a>
             <a href="perfil.php" class="btn btn-danger me-5">Perfil</a>
         </div>
-        <img class="avatar-30 rounded" id="avatar" src="<?php echo $_SESSION['foto']; ?>">
+        <img class="avatar-30 rounded" id="avatar" class="icon"  src="<?php echo $_SESSION['foto']; ?>">
     </nav>
 </body>
 </html>
