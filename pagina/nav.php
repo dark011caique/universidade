@@ -68,28 +68,31 @@ mysqli_close($conexao);
             margin-top: 1rem;
             border-radius: 50%;
         }
+
     </style>
 
 </head>
 <body>
 
-<form action="upload_foto.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="foto" accept="image/*">
-    <button type="submit">Enviar</button>
-</form>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="d-flex"> 
+        <a href="cor.php" class="btn btn-danger me-5">Escolha sua cor de fundo</a>
+        <a href="professores.php" class="btn btn-danger me-5">Meus professores</a>
+        <a href="disciplinas.php" class="btn btn-danger me-5">Disciplina</a>
+        <a href="" class="btn btn-danger me-5">Histórico</a>
+        <a href="alunos.php" class="btn btn-danger me-5">Alunos</a>
+        <a href="" class="btn btn-danger me-5">Turma</a>
+        <a href="perfil.php" class="btn btn-danger me-5">Perfil</a>
+    </div>
+    <div class="avatar-container" >
+    <form action="upload_foto.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="foto" accept="image/*" >
+    <button type="submit">Enviar</button>
+    </form>
+    </div>
+    <img class="avatar-30 rounded" id="avatar" class="icon" src="<?php echo $_SESSION['foto']; ?>" onclick="trocarFoto()">
+</nav>
 
-        <div class="d-flex" > 
-            <a href="cor.php" class="btn btn-danger me-5">escolha sua cor de fundo</a>
-            <a href="professores.php" class="btn btn-danger me-5">Meus professores</a>
-            <a href="disciplinas.php" class="btn btn-danger me-5">Disciplina</a>
-            <a href="" class="btn btn-danger me-5">Historico</a>
-            <a href="alunos.php" class="btn btn-danger me-5">Alunos</a>
-            <a href="" class="btn btn-danger me-5">Turma</a>
-            <a href="perfil.php" class="btn btn-danger me-5">Perfil</a>
-        </div>
-        <img class="avatar-30 rounded" id="avatar" class="icon"  src="<?php echo $_SESSION['foto']; ?>">
-    </nav>
+
 </body>
 </html>
