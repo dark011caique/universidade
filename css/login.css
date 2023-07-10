@@ -1,0 +1,78 @@
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(50deg, rgba(88,18,93,100) 21%, rgba(31,33,104,20) 71%);
+   
+}
+
+aside{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    text-transform: uppercase
+}
+
+.grupo-input {
+    border: 1px solid rgb(221, 123, 123);
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    padding: 5rem 5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow:  6px 6px 6px #f3f1f71c;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.50rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 0.50rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow:  1px 1px 6px #d9d6e0d8;
+}
+
+.input-box input:hover {
+    background-color: #fff;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #e7e6f0;
+}
+
+.Cadastrese{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 0.50rem;
+    
+}
+
+.Cadastrese button{
+    padding: 0.30rem;
+    border: none;
+    border-radius: 10px;
+    background-color:rgba(226, 41, 41, 0.904);
+}
+
+.Cadastrese button a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.15rem;
+    text-transform: uppercase
+}

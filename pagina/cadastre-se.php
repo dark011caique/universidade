@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Cadastre-se</title>
 </head>
 <body>
@@ -39,17 +40,22 @@ if (isset($_POST['submit'])) {
     
     <div>
         <form action="testeCadastro.php" method="POST">
-            <input type="hidden" name="MAT">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
-            <br><br>
-            <label for="endereco">Endereço</label>
-            <input type="text" name="endereco" id="endereco" required>
-            <br><br>
-            <label for="cidade">Cidade</label>
-            <input type="text" name="cidade" id="cidade" required>
-            <br><br>
-            <input type="submit" name="submit" value="Enviar">
+        <div class="grupo-input">
+
+            <div class="input-box">
+                <input type="hidden" name="MAT">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" required>
+            
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" required>
+            
+                <input type="submit" name="submit" value="Enviar">
+            </div>
+        </div>
         </form>
     </div>
 </body>

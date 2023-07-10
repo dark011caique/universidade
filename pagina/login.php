@@ -2,6 +2,8 @@
 
 session_start();
 
+include'../conf/config.php';
+
 $conexao = mysqli_connect('localhost', 'root', '', 'universidade');
 
 if ($conexao) {
@@ -34,23 +36,43 @@ if ($conexao) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
+
 </head>
 <body>
-    <a href="home.php">Voltar</a>
-        <div>
-            <h1>Login</h1>
+<main>
+<a class="link-voltar" href="home.php">Voltar</a>
+    <aside>
+    
+        <div class="login">
+            <h1 class="logo">Login</h1>
             <form action="testeLogin.php" method="POST">
-                <input type="text" name="MAT" placeholder="MAT">
-                <br>
-                <br>
-                <input type="text" name="nome" placeholder="Nome">
-                <br>
-                <br>
-                <input type="submit" name="submit" value="Enviar">
+                <div class="grupo-input">
+
+                    <div class="input-box">
+
+                        <input type="text" name="MAT" placeholder="MAT">
+
+                        <input type="text" name="nome" placeholder="Nome">
+
+                        <input type="submit" name="submit" value="Entrar">
+
+                        <div class="Cadastrese">
+                        
+                        <button><a href="cadastre-se.php">Cadastre-se</a></button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
             </form>
         </div>
         <br>
-        <a href="cadastre-se.php">Cadastre-se</a>
+</body>
+    </aside>
+</main>
 </body>
 </html>

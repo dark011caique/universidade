@@ -7,7 +7,7 @@ include 'C:\wamp64\www\banco\conf\config.php';
 $conexao = mysqli_connect('localhost', 'root', '', 'universidade');
 
 if (isset($_POST['submit'])) {
-
+    
     $nome = $_POST['nome'];
     $endereco = $_POST['endereco'];
     $cidade = $_POST['cidade'];
