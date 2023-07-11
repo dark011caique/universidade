@@ -1,0 +1,38 @@
+
+main{
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    display: block ;
+    flex-direction: column;
+}
+
+.logo-detalhe {
+    display: flex;
+}
+
+.logo-detalhe img {
+    width: 25rem;
+    height: 35rem;
+}
+
+.informacao {
+    padding: 1rem;
+}
+
+.informacao h1, h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.paragrafo {
+    padding: 0.30rem;
+    color: rgb(54, 51, 51);
+    font-size: 1.10rem;
+}

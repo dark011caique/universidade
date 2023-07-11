@@ -30,14 +30,14 @@
 
             echo"erro ao achar usuario1";
 
-            header('location: login.php');
+            header('location: ../pagina/perfil.php');
         }
         else
         {
             $_SESSION['MAT'] = $MAT;
             $_SESSION['nome'] = $nome;
 
-            header('location: perfil.php');
+            header('location: ../pagina/perfil.php');
         }
 
     }else{

@@ -70,7 +70,7 @@ mysqli_close($conexao);
     <p>Nome: <?php echo $_SESSION['nome']; ?></p>
     <p>Matrícula: <?php echo $_SESSION['MAT']; ?></p>
     <p>Cor de Fundo: <?php echo $_SESSION['cor_fundo']; ?></p>
-    <a href="login.php">Sair</a>
+    <a href="../cadastro/login.php">Sair</a>
 </body>
 </html>
 

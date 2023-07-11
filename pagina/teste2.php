@@ -60,7 +60,7 @@ if ($conexao) {
 
                         <div class="Cadastrese">
                         
-                        <button><a href="cadastre-se.php">Cadastre-se</a></button>
+                        <button><a href="../cadastro/cadastre-se.php">Cadastre-se</a></button>
 
                         </div>
 

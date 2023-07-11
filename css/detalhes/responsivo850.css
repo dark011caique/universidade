@@ -1,0 +1,59 @@
+@media screen and (max-width:1300px) {
+
+    header{
+        margin: 0;
+    }
+
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-list{
+        display: none;
+    }
+
+    .nav-botao{
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-icon button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-menu{
+        justify-content: center;
+    }
+
+    .mobile-menu .nav-item {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 22px;
+    }
+
+    .mobile-menu .nav-botao button {
+        width: 100%;
+    }
+
+    .open {
+        display: flex;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-detalhe img {
+        height: 25rem;
+    }
+}

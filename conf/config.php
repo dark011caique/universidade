@@ -15,8 +15,9 @@ if($conexao){
         nome VARCHAR(100),
         endereco VARCHAR(100),
         cidade VARCHAR(50),
-        cor_fundo VARCHAR(10)
-        foto VARCHAR(100)
+        cor_fundo VARCHAR(10),
+        foto VARCHAR(100),
+        sexo VARCHAR(45)
     ) ENGINE=InnoDB";
 
      // Executa a consulta para criar a tabela
